@@ -1,0 +1,7 @@
+# build output
+thread-by-thread.html
+_site/
+shots/
+
+__pycache__/
+.DS_Store
