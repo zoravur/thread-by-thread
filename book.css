@@ -98,6 +98,14 @@ a:focus-visible, button:focus-visible, li:focus-visible { outline: 2px solid var
 }
 .hero .lede { max-width: 34rem; font-size: 1.2rem; margin: 0; text-wrap: pretty; }
 .hero .lede code { font-size: .92em; }
+.hero .credits {
+  font-family: var(--f-mono);
+  font-size: .8rem;
+  margin: 1.4rem 0 0;
+  opacity: .85;
+}
+.hero .credits a { color: inherit; text-decoration-color: rgba(238, 240, 250, .45); text-underline-offset: .2em; }
+.hero .credits a:hover { text-decoration-color: currentColor; }
 
 /* ---------------------------------------------------------------- book */
 .book { padding: 3rem 20px 6rem; }
