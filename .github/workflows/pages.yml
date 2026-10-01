@@ -31,6 +31,7 @@ jobs:
           python build.py
           mkdir -p _site
           cp thread-by-thread.html _site/index.html
+          cp -r fonts _site/fonts
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

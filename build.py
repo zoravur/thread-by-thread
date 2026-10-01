@@ -84,6 +84,8 @@ html = subprocess.run(
      "--mathml", "--no-highlight", "--metadata", "pagetitle=Thread by Thread"],
     cwd=here, check=True, capture_output=True, text=True).stdout
 html = html.replace("<!--SVG:dispatch-->", dispatch_svg()).replace("<!--SVG:tree-->", tree_svg())
+# Fonts are self-hosted (fonts/, deployed next to the page) so readers' browsers never contact Google.
+html = html.replace("/*FONTS_CSS*/", (here / "fonts" / "fonts.css").read_text())
 html = html.replace("/*BOOK_CSS*/", (here / "book.css").read_text())
 html = html.replace("/*TOY_JS*/", (here / "toy.js").read_text())
 (here / "thread-by-thread.html").write_text(html)
